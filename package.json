@@ -21,10 +21,10 @@
   },
   "homepage": "https://github.com/hexlet-components/js-http-request#readme",
   "dependencies": {
-    "gulp": "*"
+    "gulp": "*",
+    "debug": "*"
   },
   "devDependencies": {
-    "debug": "*",
     "nock": "*",
     "mocha": "*",
     "babel-cli": "*",
