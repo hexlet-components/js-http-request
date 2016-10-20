@@ -7,10 +7,11 @@ import log from './logger';
 export default config => new Promise((resolve, reject) => {
   const headers = config.headers;
 
-  const parsedUrl = url.parse(config.url);
-  const joinedParams = { ...querystring.parse(parsedUrl.query), ...config.params };
+  const parsedUrl = url.parse(config.url, true);
+  const joinedParams = { ...parsedUrl.query, ...config.params };
   const query = querystring.stringify(joinedParams);
   const path = query === '' ? `${parsedUrl.path}` : `${parsedUrl.path}?${query}`;
+
   const options = {
     hostname: parsedUrl.hostname,
     port: parsedUrl.port,
@@ -48,6 +49,10 @@ export default config => new Promise((resolve, reject) => {
 
   req.on('error', err => {
     log(err);
+    reject(err);
+  });
+
+  req.on('error', err => {
     reject(err);
   });
 

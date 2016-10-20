@@ -1,16 +1,17 @@
 import log from './logger';
 import request from './request';
+import querystring from 'querystring';
 
 const prepareData = (data, headers) => {
   if (data === undefined) {
     return [data, headers];
   }
-  const jsonData = JSON.stringify(data);
-  const bufferData = new Buffer(jsonData, 'utf-8');
+  const preparedData = querystring.stringify(data);
+  const bufferData = new Buffer(preparedData, 'utf-8');
   return [bufferData, {
     ...headers,
-    'Content-Type': 'application/json;charset=utf-8',
-    'Content-Length': bufferData.length,
+    'Content-Type': 'application/x-www-form-urlencoded',
+    'Content-Length': Buffer.byteLength(bufferData),
   }];
 };
 

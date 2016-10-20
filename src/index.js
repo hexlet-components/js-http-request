@@ -2,6 +2,7 @@
 
 import dispatch from './dispatcher';
 
-const get = (url, config = {}) => dispatch({ ...config, url, method: 'get' });
+export const get = (url, config = {}) => dispatch({ ...config, url, method: 'GET' });
+export const post = (url, data, config = {}) => dispatch({ ...config, url, data, method: 'POST' });
 
-export default { get };
+export default { get, post };
