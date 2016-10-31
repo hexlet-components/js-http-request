@@ -1,5 +1,9 @@
 install:
-	yarn.js
+	yarn
+
+docs:
+	mkdir -p docs
+	npm run documentation -- build src/index.js -f md > docs/README.md
 
 build:
 	rm -rf dist
@@ -14,4 +18,4 @@ lint:
 publish:
 	npm publish
 
-.PHONY: test
+.PHONY: test docs

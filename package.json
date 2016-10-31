@@ -4,6 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
+    "documentation": "documentation",
     "test": "mocha --compilers js:babel-core/register --colors",
     "gulp": "gulp",
     "eslint": "eslint",
@@ -25,6 +26,7 @@
     "debug": "*"
   },
   "devDependencies": {
+    "documentation": "v4.0.0-beta11",
     "nock": "*",
     "mocha": "*",
     "babel-cli": "*",
