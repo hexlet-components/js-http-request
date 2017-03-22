@@ -1,6 +1,7 @@
+import querystring from 'querystring';
+
 import log from './logger';
 import request from './request';
-import querystring from 'querystring';
 
 const prepareData = (data, headers) => {
   if (data === undefined) {
@@ -15,7 +16,7 @@ const prepareData = (data, headers) => {
   }];
 };
 
-export default rawConfig => {
+export default (rawConfig) => {
   const [data, headers] = prepareData(rawConfig.data, rawConfig.headers || {});
 
   const config = {

@@ -22,7 +22,7 @@ export default config => new Promise((resolve, reject) => {
 
   log(options);
 
-  const req = http.request(options, res => {
+  const req = http.request(options, (res) => {
     const response = {
       status: res.statusCode,
       statusText: res.statusMessage,
@@ -36,7 +36,7 @@ export default config => new Promise((resolve, reject) => {
       responseData.push(chunk.toString());
     });
 
-    res.on('error', err => {
+    res.on('error', (err) => {
       log(err);
       reject(err);
     });
@@ -47,12 +47,12 @@ export default config => new Promise((resolve, reject) => {
     });
   });
 
-  req.on('error', err => {
+  req.on('error', (err) => {
     log(err);
     reject(err);
   });
 
-  req.on('error', err => {
+  req.on('error', (err) => {
     reject(err);
   });
 

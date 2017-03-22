@@ -6,7 +6,6 @@
   "scripts": {
     "documentation": "documentation",
     "test": "mocha --compilers js:babel-core/register --colors",
-    "gulp": "gulp",
     "eslint": "eslint",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublish": "npm run build"
@@ -22,23 +21,21 @@
   },
   "homepage": "https://github.com/hexlet-components/js-http-request#readme",
   "dependencies": {
-    "gulp": "*",
     "debug": "*"
   },
   "devDependencies": {
-    "documentation": "v4.0.0-beta11",
-    "nock": "*",
-    "mocha": "*",
     "babel-cli": "*",
     "babel-core": "*",
-    "babel-preset-latest": "*",
-    "babel-preset-stage-0": "*",
-    "eslint": "*",
     "babel-eslint": "*",
-    "babel-plugin-syntax-flow": "*",
-    "babel-plugin-transform-flow-strip-types": "*",
+    "babel-preset-env": "*",
+    "babel-preset-flow": "*",
+    "babel-preset-stage-0": "*",
+    "documentation": "v4.0.0-beta11",
+    "eslint": "*",
     "eslint-config-airbnb": "*",
+    "eslint-plugin-flowtype": "*",
     "eslint-plugin-import": "^1.8.0",
-    "eslint-plugin-flowtype": "*"
+    "mocha": "*",
+    "nock": "*"
   }
 }
