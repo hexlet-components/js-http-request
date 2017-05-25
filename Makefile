@@ -13,7 +13,7 @@ test:
 	DEBUG=hexlet-http-request npm run test
 
 lint:
-	npm run eslint -- src test
+	npm run eslint -- src __tests__
 
 publish:
 	npm publish
