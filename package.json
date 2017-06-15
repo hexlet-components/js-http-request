@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/hexlet-components/js-http-request#readme",
   "dependencies": {
+    "source-map-support": "*",
     "babel-preset-env": "*",
     "babel-preset-flow": "*",
     "babel-preset-stage-0": "*",
