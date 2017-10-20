@@ -21,17 +21,17 @@
   },
   "homepage": "https://github.com/hexlet-components/js-http-request#readme",
   "dependencies": {
-    "source-map-support": "*",
-    "babel-preset-env": "*",
-    "babel-preset-flow": "*",
-    "babel-preset-stage-0": "*",
-    "debug": "*"
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "debug": "^3.1.0",
+    "source-map-support": "^0.5.0"
   },
   "devDependencies": {
     "babel-cli": "*",
     "babel-core": "*",
     "babel-eslint": "*",
-    "documentation": "^v4.0.0-beta11",
+    "documentation": "*",
     "eslint": "*",
     "eslint-config-airbnb": "*",
     "eslint-plugin-flowtype": "*",
