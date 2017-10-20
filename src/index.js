@@ -7,7 +7,7 @@ import dispatch from './dispatcher';
  * Perform get request
  *
  * @example
- * get(host).then(response => console.log(response.body))
+ * get(host).then(response => console.log(response.data))
  *
  */
 export const get = (url: string, config: Object = {}) =>
