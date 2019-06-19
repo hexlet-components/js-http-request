@@ -19,6 +19,11 @@ export const get = (url: string, config: Object = {}) =>
  * post(host, { key: 'value' }).then(response => console.log(response.status))
  */
 export const post = (url: string, data: Object, config: Object = {}) =>
-  dispatch({ ...config, url, data, method: 'POST' });
+  dispatch({
+    ...config,
+    url,
+    data,
+    method: 'POST',
+  });
 
 export default { get, post };

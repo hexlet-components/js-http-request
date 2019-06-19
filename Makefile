@@ -10,10 +10,10 @@ build:
 	npm run build
 
 test:
-	DEBUG=hexlet-http-request npm run test
+	DEBUG=@hexlet/http-request npm run test
 
 lint:
-	npm run eslint -- src __tests__
+	npx eslint .
 
 publish:
 	npm publish
