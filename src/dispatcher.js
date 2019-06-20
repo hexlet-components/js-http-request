@@ -8,7 +8,7 @@ const prepareData = (data, headers) => {
     return [data, headers];
   }
   const preparedData = querystring.stringify(data);
-  const bufferData = new Buffer(preparedData, 'utf-8');
+  const bufferData = Buffer.from(preparedData, 'utf-8');
   return [bufferData, {
     ...headers,
     'Content-Type': 'application/x-www-form-urlencoded',
