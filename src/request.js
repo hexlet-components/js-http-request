@@ -1,3 +1,5 @@
+// @ts-check
+
 import http from 'http';
 import url from 'url';
 import querystring from 'querystring';

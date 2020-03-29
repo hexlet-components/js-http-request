@@ -1,4 +1,4 @@
-// @flow
+// @ts-check
 
 import nock from 'nock';
 import querystring from 'querystring';

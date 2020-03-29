@@ -1,3 +1,5 @@
+// @ts-check
+
 import querystring from 'querystring';
 
 import log from './logger';
