@@ -7,7 +7,7 @@ import { get, post } from '../src'; // hexlet-http-request
 nock.disableNetConnect();
 
 describe('HexletHttpRequest', () => {
-  it('#get', () => {
+  it('#get body', () => {
     const host = 'http://ru.hexlet.io';
     const body = 'hello, world';
     nock(host)
@@ -28,7 +28,7 @@ describe('HexletHttpRequest', () => {
     return expect(get(host, { params })).resolves.toMatchObject({ data: body });
   });
 
-  it('#get', () => {
+  it('#get status', () => {
     const host = 'http://ru.hexlet.io';
     const status = 301;
     nock(host).get('/').reply(status);
@@ -67,7 +67,7 @@ describe('HexletHttpRequest', () => {
       },
     }).post(pathname, data).reply(status);
 
-    expect(post(`${host}${pathname}`, data)).resolves
+    return expect(post(`${host}${pathname}`, data)).resolves
       .toMatchObject({ status });
   });
 });

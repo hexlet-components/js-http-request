@@ -6,7 +6,7 @@ import querystring from 'querystring';
 
 import log from './logger';
 
-export default config => new Promise((resolve, reject) => {
+export default (config) => new Promise((resolve, reject) => {
   const { headers } = config;
 
   const parsedUrl = url.parse(config.url, true);
