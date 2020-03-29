@@ -2,7 +2,7 @@
 
 import nock from 'nock';
 import querystring from 'querystring';
-import { get, post } from '../src'; // hexlet-http-request
+import { get, post } from '../src';
 
 nock.disableNetConnect();
 
