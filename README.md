@@ -1,8 +1,7 @@
 # js-http-request
 
+[![github action status](https://github.com/hexlet-components/js-http-request/workflows/Node%20CI/badge.svg)](https://github.com/hexlet-components/js-http-request/actions)
 [![Code Climate](https://codeclimate.com/github/hexlet-components/js-http-request/badges/gpa.svg)](https://codeclimate.com/github/hexlet-components/js-http-request)
-[![Issue Count](https://codeclimate.com/github/hexlet-components/js-http-request/badges/issue_count.svg)](https://codeclimate.com/github/hexlet-components/js-http-request)
-[![Build Status](https://travis-ci.org/hexlet-components/js-http-request.svg?branch=master)](https://travis-ci.org/hexlet-components/js-http-request)
 
 ## Install
 
