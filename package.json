@@ -6,9 +6,7 @@
   "type": "module",
   "scripts": {
     "documentation": "documentation",
-    "test": "npx -n --experimental-vm-modules -n --no-warnings jest --colors",
-    "eslint": "eslint",
-    "prepublishOnly": "npm run build"
+    "test": "npx -n --experimental-vm-modules -n --no-warnings jest --colors"
   },
   "repository": {
     "type": "git",
