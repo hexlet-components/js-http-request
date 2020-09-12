@@ -1,15 +1,15 @@
 // @ts-check
 
-import dispatch from './dispatcher';
+import dispatch from './dispatcher.js';
 
 /**
  * Perform get request
  *
  * @example
- * get(host).then((response) => console.log(response.data))
+ * get(host).then(response => console.log(response.data))
  *
  */
-export const get = (url, config) => (
+export const get = (url, config = {}) => (
   dispatch({ ...config, url, method: 'GET' })
 );
 
@@ -17,9 +17,9 @@ export const get = (url, config) => (
  * Perform post request
  *
  * @example
- * post(host, { key: 'value' }).then((response) => console.log(response.status))
+ * post(host, { key: 'value' }).then(response => console.log(response.status))
  */
-export const post = (url, data, config) => (
+export const post = (url, data, config = {}) => (
   dispatch({
     ...config,
     url,

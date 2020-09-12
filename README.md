@@ -1,7 +1,6 @@
 # js-http-request
 
 [![github action status](https://github.com/hexlet-components/js-http-request/workflows/Node%20CI/badge.svg)](https://github.com/hexlet-components/js-http-request/actions)
-[![Code Climate](https://codeclimate.com/github/hexlet-components/js-http-request/badges/gpa.svg)](https://codeclimate.com/github/hexlet-components/js-http-request)
 
 ## Install
 
@@ -9,16 +8,10 @@
 npm install @hexlet/http-request
 ```
 
-## Usage example
+## Setup
 
-```javascript
-import { get, post } from '@hexlet/http-request';
-
-get(host)
-  .then((response) => console.log(response.data));
-
-post(host, { key: 'value' })
-  .then((response) => console.log(response.status));
+```
+make install
 ```
 
 For more information, see the [Full Documentation](https://github.com/hexlet-components/js-http-request/tree/master/docs)

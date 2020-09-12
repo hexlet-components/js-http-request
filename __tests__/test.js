@@ -1,13 +1,13 @@
-// @ts-check
+// @flow
 
 import nock from 'nock';
 import querystring from 'querystring';
-import { get, post } from '../src';
+import { get, post } from '../src/index.js'; // hexlet-http-request
 
 nock.disableNetConnect();
 
 describe('HexletHttpRequest', () => {
-  it('#get body', () => {
+  it('#get 1', () => {
     const host = 'http://ru.hexlet.io';
     const body = 'hello, world';
     nock(host)
@@ -28,7 +28,7 @@ describe('HexletHttpRequest', () => {
     return expect(get(host, { params })).resolves.toMatchObject({ data: body });
   });
 
-  it('#get status', () => {
+  it('#get 2', () => {
     const host = 'http://ru.hexlet.io';
     const status = 301;
     nock(host).get('/').reply(status);
@@ -36,7 +36,7 @@ describe('HexletHttpRequest', () => {
     return expect(get(host)).resolves.toMatchObject({ status });
   });
 
-  it('#get 2', () => {
+  it('#get 3', () => {
     const host = 'http://ru.hexlet.io';
     const pathname = '/users/new';
     const body = 'hello, world';
@@ -45,7 +45,7 @@ describe('HexletHttpRequest', () => {
     return expect(get(`${host}${pathname}`)).resolves.toMatchObject({ data: body });
   });
 
-  it('#get 3', () => {
+  it('#get 4', () => {
     const host = 'http://ru.hexlet.io';
     const pathname = '/users/new';
     nock(host).get(pathname).replyWithError('timeout error');

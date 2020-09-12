@@ -4,7 +4,7 @@ import http from 'http';
 import url from 'url';
 import querystring from 'querystring';
 
-import log from './logger';
+import log from './logger.js';
 
 export default (config) => new Promise((resolve, reject) => {
   const { headers } = config;
