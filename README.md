@@ -10,7 +10,7 @@ npm install @hexlet/http-request
 
 ## Setup
 
-```
+```sh
 make install
 ```
 
