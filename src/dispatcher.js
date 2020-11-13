@@ -2,8 +2,8 @@
 
 import querystring from 'querystring';
 
-import log from './logger';
-import request from './request';
+import log from './logger.js';
+import request from './request.js';
 
 const prepareData = (data, headers) => {
   if (data === undefined) {
