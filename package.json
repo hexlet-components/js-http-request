@@ -22,7 +22,7 @@
     "debug": "^4.3.1"
   },
   "devDependencies": {
-    "documentation": "^13.1.0",
+    "documentation": "^14.0.0",
     "eslint": "^7.18.0",
     "eslint-config-airbnb": "*",
     "eslint-plugin-flowtype": "^5.2.0",
