@@ -9,9 +9,8 @@ import dispatch from './dispatcher.js';
  * get(host).then(response => console.log(response.data))
  *
  */
-export const get = (url, config = {}) => (
-  dispatch({ ...config, url, method: 'GET' })
-);
+export const get = (url, config = {}) =>
+  dispatch({ ...config, url, method: 'GET' });
 
 /**
  * Perform post request
@@ -19,13 +18,12 @@ export const get = (url, config = {}) => (
  * @example
  * post(host, { key: 'value' }).then(response => console.log(response.status))
  */
-export const post = (url, data, config = {}) => (
+export const post = (url, data, config = {}) =>
   dispatch({
     ...config,
     url,
     data,
     method: 'POST',
-  })
-);
+  });
 
 export default { get, post };
