@@ -11,11 +11,14 @@ const prepareData = (data, headers) => {
   }
   const preparedData = querystring.stringify(data);
   const bufferData = Buffer.from(preparedData, 'utf-8');
-  return [bufferData, {
-    ...headers,
-    'Content-Type': 'application/x-www-form-urlencoded',
-    'Content-Length': Buffer.byteLength(bufferData),
-  }];
+  return [
+    bufferData,
+    {
+      ...headers,
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Content-Length': Buffer.byteLength(bufferData),
+    },
+  ];
 };
 
 export default (rawConfig) => {

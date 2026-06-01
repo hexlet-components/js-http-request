@@ -10,9 +10,7 @@ describe('HexletHttpRequest', () => {
   it('#get 1', () => {
     const host = 'http://ru.hexlet.io';
     const body = 'hello, world';
-    nock(host)
-      .get('/')
-      .reply(200, body);
+    nock(host).get('/').reply(200, body);
 
     return expect(get(host)).resolves.toMatchObject({ data: body });
   });
@@ -42,7 +40,9 @@ describe('HexletHttpRequest', () => {
     const body = 'hello, world';
     nock(host).get(pathname).reply(200, body);
 
-    return expect(get(`${host}${pathname}`)).resolves.toMatchObject({ data: body });
+    return expect(get(`${host}${pathname}`)).resolves.toMatchObject({
+      data: body,
+    });
   });
 
   it('#get 4', () => {
@@ -50,8 +50,9 @@ describe('HexletHttpRequest', () => {
     const pathname = '/users/new';
     nock(host).get(pathname).replyWithError('timeout error');
 
-    return expect(get(`${host}${pathname}`)).rejects
-      .toMatchObject({ message: 'timeout error' });
+    return expect(get(`${host}${pathname}`)).rejects.toMatchObject({
+      message: 'timeout error',
+    });
   });
 
   it('#post', () => {
@@ -65,9 +66,12 @@ describe('HexletHttpRequest', () => {
         'Content-Type': 'application/x-www-form-urlencoded',
         'Content-Length': preparedData.length.toString(),
       },
-    }).post(pathname, data).reply(status);
+    })
+      .post(pathname, data)
+      .reply(status);
 
-    return expect(post(`${host}${pathname}`, data)).resolves
-      .toMatchObject({ status });
+    return expect(post(`${host}${pathname}`, data)).resolves.toMatchObject({
+      status,
+    });
   });
 });
