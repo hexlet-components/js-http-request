@@ -1,6 +1,6 @@
 // @ts-check
 
-import dispatch from './dispatcher.js';
+import dispatch from "./dispatcher.js";
 
 /**
  * Perform get request
@@ -9,8 +9,7 @@ import dispatch from './dispatcher.js';
  * get(host).then(response => console.log(response.data))
  *
  */
-export const get = (url, config = {}) =>
-  dispatch({ ...config, url, method: 'GET' });
+export const get = (url, config = {}) => dispatch({ ...config, url, method: "GET" });
 
 /**
  * Perform post request
@@ -23,7 +22,7 @@ export const post = (url, data, config = {}) =>
     ...config,
     url,
     data,
-    method: 'POST',
+    method: "POST",
   });
 
 export default { get, post };
