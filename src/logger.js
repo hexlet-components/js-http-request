@@ -1,5 +1,5 @@
 // @ts-check
 
-import debug from 'debug';
+import debug from "debug";
 
-export default debug('@hexlet/http-request');
+export default debug("@hexlet/http-request");
