@@ -2,6 +2,12 @@
 
 [![github action status](https://github.com/hexlet-components/js-http-request/workflows/Node%20CI/badge.svg)](https://github.com/hexlet-components/js-http-request/actions)
 
+## Зачем это нужно
+
+Учебный HTTP-клиент. Нужен там, где надо показать работу с сетью, не завися от
+настоящего сервера: запросы обслуживает подставной слой, поэтому тесты
+детерминированы и работают без интернета.
+
 ## Install
 
 ```sh
