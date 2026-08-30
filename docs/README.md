@@ -6,12 +6,12 @@
 
 ### Table of Contents
 
--   [get][1]
-    -   [Parameters][2]
-    -   [Examples][3]
--   [post][4]
-    -   [Parameters][5]
-    -   [Examples][6]
+- [get][1]
+    - [Parameters][2]
+    - [Examples][3]
+- [post][4]
+    - [Parameters][5]
+    - [Examples][6]
 
 ## get
 
@@ -19,8 +19,8 @@ Perform get request
 
 ### Parameters
 
--   `url`  
--   `config`   (optional, default `{}`)
+- `url`  
+- `config` (optional, default `{}`)
 
 ### Examples
 
@@ -34,9 +34,9 @@ Perform post request
 
 ### Parameters
 
--   `url`  
--   `data`  
--   `config`   (optional, default `{}`)
+- `url`  
+- `data`  
+- `config` (optional, default `{}`)
 
 ### Examples
 
